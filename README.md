@@ -1,3 +1,5 @@
+
+
 ### structure HTML:
 |Block №|Имя блока| Компоненты | Реализация|
 |-------|---------|-------------------------------------|-----|
@@ -9,27 +11,37 @@
 |3      |basket   |список товаров, добавленных в корзину| отобажение данных из Local Storage 
 |4      |quickView|                                     |модальное окно с быстрым просмотром товара: имя, изображение, описание, цена, "кнопка добавить в корзину"
 
+### points css-adaptive:
+
+* min-width: 901px; max-width: 1024px
+* min-width: 769px; max-width: 900px
+* min-width: 601px; max-width: 768px
+* min-width: 481px; max-width: 600px
+* min-width: 320px; max-width: 480px
+
+проверять, как стили ведут себя для заданных в браузер значениях, т.е. для iPhone SE, iPad Air, Galaxy Fold, etc...
+
+
 ### structure JS:
-*содержание ниже как предложение. структура, названия элементов/объектов/функций могут быть иными*
-- все товары представлены как объект. структура объекта:
+
+JS files:
+1. index.js - главный файл с импортом сторонних функций
+2. search.js - файл для поиска товаров
+3. basket.js - файл реализации функционала корзины
+4. slider - файл функционала слайдера
+
+
+- все товары представлены как объект. структура объекта с подгрузкой из mockAPI.io:
 ```js
 {
-    name: "string",
-    id: Number,
-    price: Number,
-    image: url or string
+    id: Object ID,
+    name: string,
+    price: number,
+    discountPrice: number
+    image: faker.js
 }
 ```
----
-&#9072; работа с картинками в объекте:
-https://stackoverflow.com/questions/38003222/javascript-adding-images-to-objects-via-object-literal-notation
 
----
-- все товары хранятся в массиве. пример структуры:
-```js
-const cards = [{name: 't-shirt_one', id: 1, price: 100, image: '/src/img/t-shirt_1.png'}, 
-{name: 'trousers', id: 2, price: 200, image: '/src/img/trousers.png'}]
-```
 
 LocalStorage хранит 2 ключа: 
 1. goods (все товары)
