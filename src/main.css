@@ -8,9 +8,7 @@
 
 .header {
     background-color: #231942;
-    box-shadow: 0px 5px 20px 2px #00000073;
 }
-
 .header-wrapper {
     margin: 0 auto;
     max-width: 1440px;
@@ -56,13 +54,10 @@
 }
 
 .cards {
+    padding: 50px;
     display: flex;
-    /* display flex - will show at as searching */
-        display: none;
     margin: 0 auto;
     max-width: 1440px;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .cards-item {
@@ -72,7 +67,6 @@
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .cards-item:hover {
@@ -90,15 +84,12 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
     margin: 20px 0;
     padding: 0 10px;
 }
 
 .item__discountPrice,
 .item__price {
-    width: 60px;
-    text-align: center;
     min-width: 50px;
 }
 
@@ -108,7 +99,7 @@
 }
 
 .item__price {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     text-decoration: line-through;
 }
 
